@@ -147,3 +147,13 @@ brew install --cask koodo-reader
    yarn
    yarn start
    ```
+
+4. 运行以下代码构建 Android 调试包
+
+   ```
+   yarn
+   yarn android:apk
+   ```
+
+   调试 APK 默认输出到 `android/app/build/outputs/apk/debug/app-debug.apk`。
+   当前 Android 工程使用 Capacitor，并要求 Java 21。若本机默认不是 Java 21，请先设置 `JAVA_HOME`。

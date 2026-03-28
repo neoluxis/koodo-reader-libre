@@ -148,6 +148,16 @@ Make sure that you have installed yarn and git
    yarn start
    ```
 
+4. Build the Android debug APK
+
+   ```
+   yarn
+   yarn android:apk
+   ```
+
+   The debug APK is generated at `android/app/build/outputs/apk/debug/app-debug.apk`.
+   The Android project uses Capacitor and requires Java 21. If Java 21 is not your default JDK, set `JAVA_HOME` first.
+
 ## Translation
 
 ### Edit current language

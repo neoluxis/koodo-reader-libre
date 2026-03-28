@@ -18,6 +18,9 @@
     "react-error-overlay": "6.0.9"
   },
   "dependencies": {
+    "@capacitor/android": "^8.3.0",
+    "@capacitor/cli": "^8.3.0",
+    "@capacitor/core": "^8.3.0",
     "@aws-sdk/client-s3": "^3.485.0",
     "adm-zip": "^0.5.2",
     "axios": "^0.19.2",
@@ -104,6 +107,10 @@
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "android:sync": "yarn build && npx cap sync android",
+    "android:run": "yarn build && npx cap sync android && cd android && JAVA_HOME=${JAVA_HOME:-/usr/lib/jvm/java-21-openjdk} PATH=${JAVA_HOME:-/usr/lib/jvm/java-21-openjdk}/bin:$PATH ./gradlew installDebug",
+    "android:open": "npx cap open android",
+    "android:apk": "yarn build && npx cap sync android && cd android && JAVA_HOME=${JAVA_HOME:-/usr/lib/jvm/java-21-openjdk} PATH=${JAVA_HOME:-/usr/lib/jvm/java-21-openjdk}/bin:$PATH ./gradlew assembleDebug",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "ele": "electron .",
