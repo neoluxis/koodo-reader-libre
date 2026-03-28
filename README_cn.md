@@ -157,3 +157,4 @@ brew install --cask koodo-reader
 
    调试 APK 默认输出到 `android/app/build/outputs/apk/debug/app-debug.apk`。
    当前 Android 工程使用 Capacitor，并要求 Java 21。若本机默认不是 Java 21，请先设置 `JAVA_HOME`。
+   完整 Android 构建流程见 [docs/android-build.zh-CN.md](./docs/android-build.zh-CN.md)。
